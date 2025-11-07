@@ -1,0 +1,115 @@
+.calculator-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.calculator {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: var(--spacing-lg);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.input-group label {
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.currency-symbol,
+.people-icon {
+  position: absolute;
+  left: var(--spacing-sm);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-light);
+  pointer-events: none;
+}
+
+.percent-symbol {
+  position: absolute;
+  right: var(--spacing-sm);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-light);
+  pointer-events: none;
+}
+
+input {
+  width: 100%;
+  padding: var(--spacing-md);
+  border: 2px solid transparent;
+  border-radius: var(--border-radius);
+  background-color: #f1f5f9;
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: right;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background-color: #f8fafc;
+}
+
+input::placeholder {
+  color: var(--text-light);
+  opacity: 0.7;
+}
+
+#bill, #people {
+  padding-left: var(--spacing-xl);
+}
+
+.tip-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-sm);
+}
+
+.custom-tip-input {
+  position: relative;
+}
+
+.custom-tip-input input {
+  text-align: right;
+  padding-right: customTip ? var(--spacing-xl) : var(--spacing-md);
+}
+
+@media (min-width: 500px) {
+  .tip-buttons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .calculator {
+    flex-direction: row;
+    gap: var(--spacing-xl);
+  }
+
+  .input-section {
+    flex: 1;
+  }
+}
