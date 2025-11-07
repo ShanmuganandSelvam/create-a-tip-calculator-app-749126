@@ -1,0 +1,27 @@
+.header {
+  text-align: center;
+  padding: var(--spacing-md) 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
+}
+
+.logo svg {
+  stroke: var(--primary-color);
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.tagline {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
